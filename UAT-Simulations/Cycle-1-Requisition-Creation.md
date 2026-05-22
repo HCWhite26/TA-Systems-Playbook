@@ -1,16 +1,16 @@
-# UAT Cycle 1 — Requisition Creation & Approval Routing
+# UAT Cycle 1 — Requisition Creation & Approval Routing (Corrected)
 
 ## Objective
-Validate that a requisition can be created successfully and that the approval workflow routes correctly based on business rules.
+Validate that a requisition is created only after headcount approval and that the TA workflow reflects the correct business process.
 
 ---
 
 ## PHASE 1 — Preconditions
 
-- User is logged in with correct role (Hiring Manager or Recruiter)
-- Access to “Create Requisition” is enabled
-- Approval chain exists (Manager → HRBP → TA Lead)
-- Job profile exists (Talent Acquisition Specialist)
+- Manager has submitted a headcount (HC) request
+- HRBP and Finance have approved the HC request
+- Hiring Manager has notified the Talent Acquisition Manager (TAM)
+- TAM has access to create requisitions
 - No known defects blocking requisition creation
 
 ---
@@ -21,61 +21,24 @@ Validate that a requisition can be created successfully and that the approval wo
 UAT-REQ-001
 
 ### Scenario
-Create a new requisition and validate approval routing.
+TAM creates a requisition after HC approval and assigns it to TAS.
 
 ### Test Steps
-1. Navigate to **Create Requisition**
-2. Select job profile: **Talent Acquisition Specialist**
-3. Enter required fields:
+1. Confirm HC approval is visible/validated (HRBP + Finance)
+2. TAM navigates to **Create Requisition**
+3. TAM selects job profile: **Talent Acquisition Specialist**
+4. TAM enters required fields:
    - Department: HR  
    - Location: Orlando  
    - Hiring Manager: John Smith  
-   - Recruiter: Helen White  
-4. Add compensation range
-5. Submit requisition for approval
+   - Recruiter: Helen White (TAS)  
+5. TAM adds compensation range
+6. TAM submits requisition for creation
+7. TAM assigns requisition to TAS for sourcing
 
 ---
 
 ## Expected Results
 
 - System generates a **Req ID**
-- Approval workflow triggers automatically
-- Routing follows:
-  1. Hiring Manager  
-  2. HRBP  
-  3. TA Lead  
-- Status updates to **Pending Approval**
-- No validation errors
-
----
-
-## PHASE 3 — Analyst Thinking Model
-
-During execution, validate:
-
-- Field prepopulation accuracy  
-- Workflow routing logic  
-- UI behavior consistency  
-- Error handling  
-- Timing of workflow triggers  
-- Data integrity  
-
----
-
-## PHASE 4 — Defect Documentation Template
-
-**Defect ID:**  
-**Severity:**  
-**Module:** Requisition Creation  
-**Steps to Reproduce:**  
-**Expected Result:**  
-**Actual Result:**  
-**Impact:**  
-**Attachments:**  
-
----
-
-## PHASE 5 — Retest & Sign-Off
-
-- If workflow functions correctly → **Pass**
-- If workflow fails → Log defect and retest after fix
+- No approval routing is triggered
