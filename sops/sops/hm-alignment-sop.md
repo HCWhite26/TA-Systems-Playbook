@@ -1,16 +1,18 @@
 # Hiring Manager Alignment SOP
 
-## Purpose
+---
+
+## 🎯 Purpose  
 Ensure the Hiring Manager (HM) and Talent Acquisition (TA) remain aligned throughout the search to prevent drift, miscommunication, and wasted cycles.  
 This SOP establishes a structured cadence for reviewing pipeline quality, decision criteria, interview performance, and market realities.
 
 ---
 
-## When HM alignment is required
+## 📌 When HM Alignment Is Required
 
 Alignment is triggered when:
 
-- The first 3–5 candidates have been screened  
+- 3–5 candidates have been screened  
 - The HM has completed at least one interview  
 - The pipeline shows patterns (positive or negative)  
 - The HM’s expectations shift  
@@ -28,7 +30,7 @@ Alignment is **mandatory** before:
 
 ---
 
-## Inputs required before alignment
+## 📝 Inputs Required Before Alignment
 
 TA prepares:
 
@@ -42,89 +44,85 @@ TA prepares:
 
 ---
 
-## Alignment meeting agenda (30 minutes)
+## 🗂️ Alignment Meeting Agenda (30 Minutes)
 
-### 1. Pipeline review
-- Number of candidates screened  
-- Number submitted  
-- Number interviewed  
+### 1. Pipeline Review  
+- Candidates screened  
+- Candidates submitted  
+- Candidates interviewed  
 - Quality patterns  
 - Market constraints  
 
-### 2. Signal review
-- Strengths observed  
-- Gaps observed  
-- Patterns across candidates  
-- Interviewer feedback consistency  
+### 2. Signal Review  
+- Strengths  
+- Gaps  
+- Patterns  
+- Interviewer consistency  
 
-### 3. Role and scope check
-- Is the HM still aligned with the original scope  
-- Any drift in expectations  
-- Any new requirements emerging  
-- Any unnecessary requirements identified  
+### 3. Role & Scope Check  
+- Alignment with original scope  
+- Drift in expectations  
+- New requirements  
+- Unnecessary requirements  
 
-### 4. Compensation and leveling check
-- Are candidates aligned with the approved band  
-- Any market pushback  
-- Any internal equity concerns  
-- Any need to revisit leveling  
+### 4. Compensation & Leveling Check  
+- Band alignment  
+- Market pushback  
+- Internal equity  
+- Leveling adjustments  
 
-### 5. Interview plan review
-- Are interviewers assessing the right signals  
-- Are interviewers calibrated  
-- Any bottlenecks  
-- Any changes needed  
+### 5. Interview Plan Review  
+- Signal coverage  
+- Interviewer calibration  
+- Bottlenecks  
+- Needed changes  
 
-### 6. Decision criteria confirmation
-Reconfirm:
-
+### 6. Decision Criteria Confirmation  
+Reconfirm:  
 - Must‑haves  
 - Nice‑to‑haves  
 - Dealbreakers  
 - Success profile  
 
-### 7. Next steps
+### 7. Next Steps  
 - TA action items  
 - HM action items  
-- Timeline adjustments  
+- Timeline updates  
 - Candidate prioritization  
 
 ---
 
-## Outputs added to the search record
+## 📄 Outputs Added to the Search Record
 
 - Updated decision criteria  
-- Updated scope (if applicable)  
+- Updated scope  
 - Updated compensation notes  
 - Updated interview plan  
-- Risks and constraints  
+- Risks & constraints  
 - Next steps with owners  
 
 ---
 
-## Standard alignment statement
+## 🗣️ Standard Alignment Statement
 
-Add this to the search record:
-
-> This alignment ensures we are calibrated on candidate quality, decision criteria, and market realities. Adjustments made today are now the source of truth for the remainder of the search.
+> “This alignment ensures we are calibrated on candidate quality, decision criteria, and market realities. Adjustments made today are now the source of truth for the remainder of the search.”
 
 ---
 
-## Cadence
+## ⏱️ Cadence
 
-- Weekly alignment for active searches  
-- Twice‑weekly for urgent or executive searches  
-- Ad‑hoc alignment when major changes occur  
+- Weekly for active searches  
+- Twice‑weekly for urgent/executive searches  
+- Ad‑hoc when major changes occur  
 
 ---
 
-## Escalation triggers
+## 🚨 Escalation Triggers
 
-Escalate to leadership when:
+Escalate when:
 
 - HM expectations conflict with market reality  
 - Compensation is materially below market  
 - Role scope expands beyond level  
 - Interviewers are misaligned  
 - Search stalls for 2+ weeks  
-
