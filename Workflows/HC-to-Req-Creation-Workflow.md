@@ -1,7 +1,5 @@
 
 
----
-
 ## Workflow Notes
 
 - HC approval **must** occur before any requisition is created  
