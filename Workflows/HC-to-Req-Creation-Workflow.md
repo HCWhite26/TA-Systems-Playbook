@@ -34,12 +34,20 @@ TAS Begins Sourcing Workflow
 - This workflow prevents shortcut drift and ensures compliance with business logic
 ```mermaid
 flowchart TD
-    A[Manager Identifies HC Need] --> B[Manager Submits HC Request]
-    B --> C[HRBP Review]
-    B --> D[Finance Review]
-    C --> E{HC Approved?}
+    %% STYLES
+    classDef manager fill:#f9c74f,stroke:#b8860b,stroke-width:1px,color:#000;
+    classDef hr fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
+    classDef ta fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
+    classDef decision fill:#9d4edd,stroke:#5a189a,stroke-width:1px,color:#fff;
+
+    %% NODES
+    A[Manager Identifies HC Need]:::manager --> B[Manager Submits HC Request]:::manager
+    B --> C[HRBP Review]:::hr
+    B --> D[Finance Review]:::hr
+    C --> E{HC Approved?}:::decision
     D --> E
-    E -->|Yes| F[Hiring Manager Notifies TAM]
-    F --> G[TAM Creates Requisition]
-    G --> H[TAM Assigns Req to TAS]
-    H --> I[TAS Begins Sourcing Workflow]
+    E -->|Yes| F[Hiring Manager Notifies TAM]:::manager
+    F --> G[TAM Creates Requisition]:::ta
+    G --> H[TAM Assigns Req to TAS]:::ta
+    H --> I[TAS Begins Sourcing Workflow]:::ta
+```
