@@ -32,12 +32,30 @@ TAS Begins Sourcing Workflow
 - TAM owns req creation and setup  
 - TAS owns sourcing and candidate movement  
 - This workflow prevents shortcut drift and ensures compliance with business logic
-1. Add a “No” path for HC Not Approved
-Right now, the diagram only shows the “Yes” path.
-We can add a rejection path like:
+```mermaid
+flowchart TD
+    %% STYLES
+    classDef manager fill:#f9c74f,stroke:#b8860b,stroke-width:1px,color:#000;
+    classDef hr fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
+    classDef ta fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
+    classDef decision fill:#9d4edd,stroke:#5a189a,stroke-width:1px,color:#fff;
+    classDef stop fill:#f94144,stroke:#7f1d1d,stroke-width:1px,color:#fff;
 
-HC Not Approved → End
+    %% NODES
+    A[Manager Identifies HC Need]:::manager --> B[Manager Submits HC Request]:::manager
+    B --> C[HRBP Review]:::hr
+    B --> D[Finance Review]:::hr
+    C --> E{HC Approved?}:::decision
+    D --> E
 
-HC Not Approved → Return to Manager
+    %% YES PATH
+    E -->|Yes| F[Hiring Manager Notifies TAM]:::manager
+    F --> G[TAM Creates Requisition]:::ta
+    G --> H[TAM Assigns Req to TAS]:::ta
+    H --> I[TAS Begins Sourcing Workflow]:::ta
 
-HC Not Approved → Revise Request
+    %% NO PATH
+    E -->|No| J[Return to Manager]:::manager
+    J --> K[Revise Request]:::manager
+    K --> L[End]:::stop
+```
