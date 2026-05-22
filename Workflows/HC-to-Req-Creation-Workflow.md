@@ -32,3 +32,14 @@ TAS Begins Sourcing Workflow
 - TAM owns req creation and setup  
 - TAS owns sourcing and candidate movement  
 - This workflow prevents shortcut drift and ensures compliance with business logic
+```mermaid
+flowchart TD
+    A[Manager Identifies HC Need] --> B[Manager Submits HC Request]
+    B --> C[HRBP Review]
+    B --> D[Finance Review]
+    C --> E{HC Approved?}
+    D --> E
+    E -->|Yes| F[Hiring Manager Notifies TAM]
+    F --> G[TAM Creates Requisition]
+    G --> H[TAM Assigns Req to TAS]
+    H --> I[TAS Begins Sourcing Workflow]
