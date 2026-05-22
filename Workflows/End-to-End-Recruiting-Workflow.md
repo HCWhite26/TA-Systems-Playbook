@@ -42,7 +42,7 @@ subgraph HR_Business_Partner_HRBP
 direction TB
 HRBP1[Validate Role Need & Org Alignment]:::hrbp
 HRBP2[Support JD Finalization]:::hrbp
-HRBP3[Participate in Debrief (If Applicable)]:::hrbp
+HRBP3[Participate in Debrief If Applicable]:::hrbp
 HRBP4[Support Offer Strategy]:::hrbp
 end
 
