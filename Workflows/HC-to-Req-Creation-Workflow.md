@@ -1,26 +1,4 @@
-# HC to Requisition Creation Workflow
 
-This workflow represents the corrected business process for how headcount approval leads to requisition creation and assignment within TA.
-
----
-
-## Workflow Diagram (Text-Based)
-
-Manager Identifies HC Need  
-        ↓  
-Manager Submits HC Request  
-        ↓  
-HRBP Review → Finance Review  
-        ↓  
-HC Approved  
-        ↓  
-Hiring Manager Notifies TAM  
-        ↓  
-TAM Creates Requisition  
-        ↓  
-TAM Assigns Req to TAS  
-        ↓  
-TAS Begins Sourcing Workflow  
 
 ---
 
