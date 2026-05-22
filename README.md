@@ -12,15 +12,16 @@ This playbook reflects a senior, technical-adjacent approach to recruiting — g
 
 A scalable, 10-step recruiting workflow diagram covering all four phases of the hiring lifecycle — from intake alignment through offer close and onboarding handoff.
 
-![End-to-End Recruiting Workflow](workflows/recruiting-workflow-diagram.svg)
+### End-to-End Recruiting Workflow
+A scalable, 10-step recruiting workflow diagram covering all four phases of the hiring lifecycle — from role kickoff through offer close and onboarding handoff.
 
 **Phases covered:**
-- Phase 1 — Intake & Alignment (Req received, intake meeting, approval gate)
-- Phase 2 — Sourcing & Pipeline Building (Active sourcing, AI-assisted signal mapping, resume review)
-- Phase 3 — Screening & Evaluation (Recruiter screen, HM interview, panel interviews, hire decision)
-- Phase 4 — Offer & Close (Offer prep, verbal offer, acceptance, onboarding handoff)
+- Phase 1 — Role Kickoff & Requisition Launch  
+- Phase 2 — Sourcing & Pipeline Development  
+- Phase 3 — Interviewing & Evaluation  
+- Phase 4 — Offer, Close & Pre‑Boarding  
 
-> View the diagram file directly: [`workflows/recruiting-workflow-diagram.svg`](workflows/recruiting-workflow-diagram.svg)
+👉 [View the full workflow diagram](Workflows/End-to-End-Recruiting-Workflow.md)
 
 ---
 
