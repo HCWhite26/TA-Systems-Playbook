@@ -34,62 +34,67 @@ TAS Begins Sourcing Workflow
 - This workflow prevents shortcut drift and ensures compliance with business logic
 ```mermaid
 flowchart LR
-    %% LANE STYLES
-    classDef hm fill:#f9c74f,stroke:#b8860b,stroke-width:1px,color:#000;
-    classDef hrbp fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
-    classDef finance fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
-    classDef tam fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
-    classDef tas fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
-    classDef decision fill:#9d4edd,stroke:#5a189a,stroke-width:1px,color:#fff;
-    classDef stop fill:#f94144,stroke:#7f1d1d,stroke-width:1px,color:#fff;
 
-    %% LANE HEADERS
-    subgraph L1 [Hiring Manager]
-    direction TB
-    A[Identify Headcount Need]:::hm
-    B[Submit Headcount Request]:::hm
-    end
+%% STYLES
+classDef hm fill:#f9c74f,stroke:#b8860b,stroke-width:1px,color:#000;
+classDef hrbp fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
+classDef finance fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
+classDef tam fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
+classDef tas fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
+classDef decision fill:#9d4edd,stroke:#5a189a,stroke-width:1px,color:#fff;
+classDef stop fill:#f94144,stroke:#7f1d1d,stroke-width:1px,color:#fff;
 
-    subgraph L2 [HR Business Partner (HRBP)]
-    direction TB
-    C[HRBP Review]:::hrbp
-    end
+%% HIRING MANAGER LANE
+subgraph Hiring_Manager
+direction TB
+A[Identify Headcount Need]:::hm
+B[Submit Headcount Request]:::hm
+end
 
-    subgraph L3 [Finance]
-    direction TB
-    D[Finance Review]:::finance
-    end
+%% HRBP LANE
+subgraph HR_Business_Partner_HRBP
+direction TB
+C[HRBP Review]:::hrbp
+end
 
-    subgraph L4 [Talent Acquisition Manager (TAM)]
-    direction TB
-    F[Hiring Manager Notifies TAM]:::hm
-    G[TAM Creates Requisition]:::tam
-    H[TAM Assigns Req to TAS]:::tam
-    end
+%% FINANCE LANE
+subgraph Finance
+direction TB
+D[Finance Review]:::finance
+end
 
-    subgraph L5 [Talent Acquisition Specialist (TAS)]
-    direction TB
-    I[TAS Begins Sourcing Workflow]:::tas
-    end
+%% TAM LANE
+subgraph Talent_Acquisition_Manager_TAM
+direction TB
+F[Hiring Manager Notifies TAM]:::hm
+G[TAM Creates Requisition]:::tam
+H[TAM Assigns Req to TAS]:::tam
+end
 
-    %% DECISION NODE (OUTSIDE LANES)
-    E{Headcount Approved?}:::decision
+%% TAS LANE
+subgraph Talent_Acquisition_Specialist_TAS
+direction TB
+I[TAS Begins Sourcing Workflow]:::tas
+end
 
-    %% FLOW CONNECTIONS
-    A --> B
-    B --> C
-    B --> D
-    C --> E
-    D --> E
+%% DECISION NODE (OUTSIDE LANES)
+E{Headcount Approved?}:::decision
 
-    %% YES PATH
-    E -->|Yes| F
-    F --> G
-    G --> H
-    H --> I
+%% FLOW CONNECTIONS
+A --> B
+B --> C
+B --> D
+C --> E
+D --> E
 
-    %% NO PATH
-    E -->|No| J[Return to Hiring Manager]:::hm
-    J --> K[Revise Request]:::hm
-    K --> L[End]:::stop
+%% YES PATH
+E -->|Yes| F
+F --> G
+G --> H
+H --> I
+
+%% NO PATH
+E -->|No| J[Return to Hiring Manager]:::hm
+J --> K[Revise Request]:::hm
+K --> L[End]:::stop
 ```
