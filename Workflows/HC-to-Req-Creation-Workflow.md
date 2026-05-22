@@ -33,29 +33,63 @@ TAS Begins Sourcing Workflow
 - TAS owns sourcing and candidate movement  
 - This workflow prevents shortcut drift and ensures compliance with business logic
 ```mermaid
-flowchart TD
-    %% STYLES
-    classDef manager fill:#f9c74f,stroke:#b8860b,stroke-width:1px,color:#000;
-    classDef hr fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
-    classDef ta fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
+flowchart LR
+    %% LANE STYLES
+    classDef hm fill:#f9c74f,stroke:#b8860b,stroke-width:1px,color:#000;
+    classDef hrbp fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
+    classDef finance fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
+    classDef tam fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
+    classDef tas fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
     classDef decision fill:#9d4edd,stroke:#5a189a,stroke-width:1px,color:#fff;
     classDef stop fill:#f94144,stroke:#7f1d1d,stroke-width:1px,color:#fff;
 
-    %% NODES
-    A[Manager Identifies HC Need]:::manager --> B[Manager Submits HC Request]:::manager
-    B --> C[HRBP Review]:::hr
-    B --> D[Finance Review]:::hr
-    C --> E{HC Approved?}:::decision
+    %% LANE HEADERS
+    subgraph L1 [Hiring Manager]
+    direction TB
+    A[Identify Headcount Need]:::hm
+    B[Submit Headcount Request]:::hm
+    end
+
+    subgraph L2 [HR Business Partner (HRBP)]
+    direction TB
+    C[HRBP Review]:::hrbp
+    end
+
+    subgraph L3 [Finance]
+    direction TB
+    D[Finance Review]:::finance
+    end
+
+    subgraph L4 [Talent Acquisition Manager (TAM)]
+    direction TB
+    F[Hiring Manager Notifies TAM]:::hm
+    G[TAM Creates Requisition]:::tam
+    H[TAM Assigns Req to TAS]:::tam
+    end
+
+    subgraph L5 [Talent Acquisition Specialist (TAS)]
+    direction TB
+    I[TAS Begins Sourcing Workflow]:::tas
+    end
+
+    %% DECISION NODE (OUTSIDE LANES)
+    E{Headcount Approved?}:::decision
+
+    %% FLOW CONNECTIONS
+    A --> B
+    B --> C
+    B --> D
+    C --> E
     D --> E
 
     %% YES PATH
-    E -->|Yes| F[Hiring Manager Notifies TAM]:::manager
-    F --> G[TAM Creates Requisition]:::ta
-    G --> H[TAM Assigns Req to TAS]:::ta
-    H --> I[TAS Begins Sourcing Workflow]:::ta
+    E -->|Yes| F
+    F --> G
+    G --> H
+    H --> I
 
     %% NO PATH
-    E -->|No| J[Return to Manager]:::manager
-    J --> K[Revise Request]:::manager
+    E -->|No| J[Return to Hiring Manager]:::hm
+    J --> K[Revise Request]:::hm
     K --> L[End]:::stop
 ```
