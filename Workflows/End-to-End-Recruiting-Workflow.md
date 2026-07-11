@@ -1,17 +1,3 @@
-# End-to-End Recruiting Workflow — v1
-
-## Purpose
-This workflow represents the full recruiting lifecycle from role kickoff through offer acceptance and pre‑boarding. It serves as the anchor workflow for all sub‑workflows in the TA Systems Playbook.
-
-## Workflow Notes
-- Covers the entire lifecycle from kickoff → sourcing → interviewing → offer → pre‑boarding  
-- Defines ownership across 7 functional lanes  
-- Establishes consistent handoffs and decision points  
-- Serves as the parent workflow for Intake, Sourcing, Interviewing, and Offer sub‑workflows  
-- Ensures alignment across TA, HRBP, Finance, and People Ops  
-
-## Diagram
-```mermaid
 flowchart LR
 
 %% ============================
