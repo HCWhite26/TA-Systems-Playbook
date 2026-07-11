@@ -1,8 +1,27 @@
+# End-to-End Recruiting Workflow — v1
+
+## Purpose
+This workflow represents the full recruiting lifecycle from role kickoff through offer acceptance and pre‑boarding. It serves as the anchor workflow for all sub‑workflows in the TA Systems Playbook. The Intake Workflow (Workflow 1.1) occurs immediately before HM1 and provides the detailed structure for role calibration, success profile definition, and interview plan alignment.
+
+## Workflow Notes
+- Covers the entire lifecycle from kickoff → sourcing → interviewing → offer → pre‑boarding  
+- Defines ownership across 7 functional lanes  
+- Establishes consistent handoffs and decision points  
+- Intake is a required sub‑workflow that occurs immediately before HM1 (Kickoff). The detailed Intake Workflow is documented in Workflow 1.1.  
+- Serves as the parent workflow for Intake, Sourcing, Interviewing, and Offer sub‑workflows  
+- Ensures alignment across TA, HRBP, Finance, and People Ops  
+
+## Sub‑Workflow Mapping
+- Workflow 1.1 — Intake Workflow (occurs immediately before HM1)  
+- Workflow 1.2 — Sourcing Workflow  
+- Workflow 1.3 — Interview Workflow  
+- Workflow 1.4 — Offer Workflow  
+- Workflow 1.5 — Pre‑Boarding Workflow
+
+## Diagram
+```mermaid
 flowchart LR
 
-%% ============================
-%% LANE STYLES
-%% ============================
 classDef hm fill:#f9c74f,stroke:#8b860b,stroke-width:1px,color:#000;
 classDef hrbp fill:#90be6d,stroke:#2d6a4f,stroke-width:1px,color:#000;
 classDef tam fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
@@ -10,10 +29,6 @@ classDef tas fill:#4d9de0,stroke:#1d3557,stroke-width:1px,color:#fff;
 classDef interview fill:#577590,stroke:#1d3557,stroke-width:1px,color:#fff;
 classDef comp fill:#f9844a,stroke:#7f4f24,stroke-width:1px,color:#000;
 classDef hr fill:#43aa8b,stroke:#2d6a4f,stroke-width:1px,color:#000;
-
-%% ============================
-%% LANE STRUCTURE
-%% ============================
 
 subgraph Hiring_Manager
 direction TB
@@ -68,10 +83,6 @@ HR1[Pre‑Boarding Handoff]:::hr
 HR2[Initiate Onboarding Workflow]:::hr
 end
 
-%% ============================
-%% PHASE SEPARATORS
-%% ============================
-
 %% Phase 1 — Role Kickoff & Requisition Launch
 HM1 --> HRBP1 --> TAM1
 HRBP1 --> HM2
@@ -91,3 +102,4 @@ TAM4 --> HM4
 %% Phase 4 — Offer, Close & Pre‑Boarding
 HM4 --> TAM5 --> TAS5 --> COMP1 --> HM5
 HM5 --> HR1 --> HR2
+
