@@ -16,7 +16,7 @@ This workflow represents the full recruiting lifecycle from role kickoff through
 - Workflow 1.2 — Sourcing Workflow  
 - Workflow 1.3 — Interview Workflow  
 - Workflow 1.4 — Offer Workflow  
-- Workflow 1.5 — Pre‑Boarding Workflow
+- Workflow 1.5 — Pre‑Boarding Workflow  
 
 ## Diagram
 ```mermaid
