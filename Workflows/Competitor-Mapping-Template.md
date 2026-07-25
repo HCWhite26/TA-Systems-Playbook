@@ -1,7 +1,10 @@
-Company:
-Product Domain:
-Tech Stack:
-Role Variants:
-Talent Density:
-Signal Quality:
-Notes:
+# Competitor Mapping Template
+
+**Company:**  
+**Product Domain:**  
+**Tech Stack:**  
+**Role Variants:**  
+**Talent Density:**  
+**Signal Quality:**  
+**Notes:**  
+
